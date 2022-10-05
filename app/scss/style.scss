@@ -5,8 +5,9 @@
 @import 'myreset.scss';
 
 // ---- ---- fonts ---- ---- //
-@font-face {
-}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;700;800&display=swap');
+// font-family: 'Comfortaa', cursive; (400;700)
+// font-family: 'Inter', sans-serif; (300;400;700;800)
 
 // ---- ---- colors ---- ---- //
 $color_main: #ffffff;
@@ -18,11 +19,98 @@ $color_text: #262c27;
 
 // ---- ---- main ---- ---- //
 body {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color_text;
 }
 .container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.logo path {
+  transition: 0.3s ease;
+}
+.logo:hover path {
+  fill: $color_accent;
+}
+.btn {
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  &:hover {
+    color: $color_text;
+    background-color: $color_hover;
+  }
+}
+.phone {
+  transition: 0.3s ease;
+
+  &:hover {
+    color: $color_hover;
+  }
+}
+.title {
+  &__h1 {
+    font-size: 64px;
+    line-height: 72px;
+    color: $color_main;
+  }
 }
 
-// ---- ---- main ---- ---- //
+// ---- ---- ---- ---- ---- //
+.header {
+  background-image: url(../images/bg/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  font-family: 'Comfortaa', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  transition: 0.3s ease;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 57px 0;
+    gap: 100px;
+  }
+  &__btn {
+    padding: 12px 72px 8px;
+    color: $color_main;
+    background-color: $color_dark;
+  }
+  &__phone {
+  }
+  &__content {
+  }
+  &__content-box {
+  }
+  &__text {
+    font-size: 24px;
+    line-height: 27px;
+    color: $color_main;
+  }
+  &__decor-text {
+    font-size: 130px;
+    font-weight: 400;
+    line-height: 145px;
+    color: $color_accent;
+    opacity: 0.3;
+    &:nth-child(4) {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 39px;
+      font-style: italic;
+      text-align: center;
+      opacity: 1;
+    }
+  }
+}
 
 // ---- ---- media ---- ---- //
 @media (max-width: 360px) {
