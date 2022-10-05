@@ -42,6 +42,7 @@ body {
   &:hover {
     color: $color_text;
     background-color: $color_hover;
+    border: none;
   }
 }
 .popup-btn {
@@ -257,6 +258,40 @@ body {
     width: 180px;
   }
   &__specs-text {
+  }
+}
+
+.buy {
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+  &__text-box {
+  }
+  &__title {
+    color: $color_accent;
+  }
+  &__text {
+    margin-bottom: 25px;
+    span {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+  &__text--accent {
+    color: $color_accent;
+  }
+  &__price {
+  }
+  &__btn {
+    color: $color_accent;
+    border: 2px solid $color_accent;
+    padding: 18px 195px 17px;
+  }
+  &__img {
   }
 }
 
