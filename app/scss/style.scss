@@ -461,8 +461,10 @@ img {
   &__top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 97px;
   }
   &__form {
+    max-width: 500px;
   }
   &__title {
     margin-bottom: 27px;
@@ -470,20 +472,51 @@ img {
   &__logo {
   }
   &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+    padding: 10px 0;
+    margin-bottom: 55px;
+    color: $color_main;
+    &::placeholder {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      opacity: 0.2;
+      color: $color_main;
+    }
   }
   &__btn {
+    font-size: 20px;
     padding: 10px 66px;
     background-color: $color_main;
   }
   &__gallery {
   }
   &__link {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 28px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $color_hover;
+    }
   }
   &__gallery-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
   &__img {
+    margin-bottom: 50px;
   }
   &__link-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 // ---- ---- media ---- ---- //
