@@ -56,6 +56,23 @@ img {
     display: block;
     margin-top: 12px;
   }
+  transition: color 0.3s ease;
+  &:hover {
+    color: $color_hover;
+  }
+  path {
+    transition: all 0.3s ease;
+  }
+  circle {
+    transition: all 0.3s ease;
+  }
+  &:hover path {
+    fill: $color_hover;
+    stroke: $color_hover;
+  }
+  &:hover circle {
+    stroke: $color_hover;
+  }
 }
 .phone {
   transition: 0.3s ease;
@@ -311,11 +328,10 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 
     &:hover {
       transform: scale(1.5);
-      transition: all 0.3s ease;
     }
   }
   &__btn {
@@ -470,6 +486,7 @@ img {
     margin-bottom: 27px;
   }
   &__logo {
+    align-self: flex-start;
   }
   &__input {
     display: block;
@@ -524,5 +541,22 @@ img {
   }
 }
 // ---- ---- media ---- ---- //
-@media (max-width: 360px) {
+@media (max-width: 1200px) {
+  .header__decor-text--two {
+    left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .header__btn {
+    width: 65%;
+  }
+  .header__top {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 150px;
+    padding: 15px 0;
+  }
+  .header__decor-text--one {
+    right: 0;
+  }
 }
