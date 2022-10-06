@@ -546,6 +546,25 @@ img {
     left: 0;
   }
 }
+@media (max-width: 1010px) {
+  .info {
+    &__top {
+      gap: 15px;
+      justify-content: space-between;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .info {
+    background-position: 45%;
+
+    &__text {
+      max-width: 250px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .header {
     &__btn {
@@ -557,7 +576,6 @@ img {
       gap: 30px 150px;
       padding: 15px 0;
     }
-
     &__decor-text--one {
       right: 0;
       bottom: 30px;
@@ -567,6 +585,22 @@ img {
     }
     &__decor-text-three {
       bottom: -50px;
+    }
+  }
+  .info {
+    &__top {
+      margin-bottom: 15vh;
+      justify-content: space-evenly;
+    }
+    &__text {
+      max-width: 300px;
+    }
+    &__img {
+      display: none;
+    }
+    &__specs {
+      flex-direction: column;
+      gap: 35px;
     }
   }
 }
@@ -589,10 +623,54 @@ img {
     }
   }
   .title {
+    text-align: center;
     &__h1 {
       font-size: 55px;
       line-height: 65px;
+    }
+  }
+  .info {
+    background-position: 40%;
+
+    &__top {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__btn-box {
+      justify-content: center;
+      margin-top: 50px;
+    }
+    &__text {
+      padding-top: 130px;
+      max-width: 100%;
+      &:nth-child(2) {
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+    }
+    &__img {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .info {
+    &__specs {
+      flex-direction: column;
+    }
+    &__specs-list {
+      width: 100%;
+    }
+    &__specs-item {
+      justify-content: space-between;
       text-align: center;
+    }
+    &__specs-caption {
+      width: auto;
+      font-weight: 400;
     }
   }
 }
@@ -612,6 +690,11 @@ img {
   }
 }
 @media (max-width: 400px) {
+  .title {
+    &__h3 {
+      font-size: 50px;
+    }
+  }
   .header {
     &__text {
       font-size: 20px;
@@ -625,6 +708,26 @@ img {
     }
     &__decor-text-three {
       font-size: 26px;
+    }
+  }
+  .info {
+    &__top {
+      margin-bottom: 15vh;
+      justify-content: space-evenly;
+    }
+    &__text {
+      font-size: 16px;
+    }
+
+    &__specs-list {
+      font-size: 16px;
+    }
+    &__specs-item {
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    &__specs-caption {
+      font-size: 14px;
     }
   }
 }
