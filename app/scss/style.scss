@@ -30,6 +30,9 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+img {
+  object-fit: cover;
+}
 .logo path {
   transition: 0.3s ease;
 }
@@ -42,7 +45,7 @@ body {
   &:hover {
     color: $color_text;
     background-color: $color_hover;
-    border: none;
+    border-color: $color_hover;
   }
 }
 .popup-btn {
@@ -262,39 +265,227 @@ body {
 }
 
 .buy {
+  margin: 150px 0 0;
   &__inner {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    justify-content: space-between;
   }
   &__text-box {
+    position: relative;
   }
   &__title {
+    width: 505px;
     color: $color_accent;
+    margin-bottom: 50px;
   }
   &__text {
+    width: 292px;
     margin-bottom: 25px;
     span {
       display: block;
+      text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 5px;
+      transition: all 0.3s;
+    }
+    &:hover span {
+      transition: all 0.3s;
+      color: $color_accent;
     }
   }
-  &__text--accent {
-    color: $color_accent;
-  }
+
   &__price {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    width: 201px;
+    height: 199px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 42px;
+    background-image: url(../images/bg/star.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.5);
+      transition: all 0.3s ease;
+    }
   }
   &__btn {
     color: $color_accent;
     border: 2px solid $color_accent;
-    padding: 18px 195px 17px;
+    padding: 18px;
+    width: 100%;
+    max-width: 484px;
+    margin-top: 50px;
+    transition: all 0.3s ease;
   }
   &__img {
+    display: block;
+    width: 100%;
+  }
+}
+.micro {
+  margin-bottom: 150px;
+  &__top {
+    background-image: url(../images/bg/bg-micro.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__top-inner {
+    min-height: 110vh;
+    position: relative;
+  }
+  &__btn-box {
+  }
+  &__btn {
+    position: absolute;
+    top: 50vh;
+    right: 370px;
+  }
+  &__top-box {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+  }
+  &__title {
+    max-width: 470px;
+    color: $color_text;
+    margin-bottom: 62px;
+  }
+  &__list {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    padding-left: 20px;
+  }
+  &__list-item {
+    padding-left: 24px;
+    margin-bottom: 15px;
   }
 }
 
+.gallery {
+  &__inner {
+  }
+  &__box {
+    display: flex;
+    gap: 68px;
+    margin-top: 115px;
+  }
+  &__text {
+    width: 350px;
+  }
+  &__min {
+    position: relative;
+    display: grid;
+    grid-template-columns: 481px 208px;
+    grid-template-rows: 433px 300px;
+    gap: 30px 24px;
+    padding: 72px 31px 52px;
+    margin: -38% 0 150px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 3px solid #262c27;
+      border-radius: 200px 0px 300px;
+      z-index: 3;
+    }
+  }
+  &__min-img {
+  }
+  &__max {
+    display: grid;
+    grid-template-columns: 300px 469px 391px;
+    grid-template-rows: 340px 270px 270px;
+    gap: 20px;
+  }
+  &__max-img {
+  }
+  &__max-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 39px;
+    font-style: italic;
+    color: $color_main;
+    background-color: $color_accent;
+    border: 1px solid $color_accent;
+    border-radius: 0px 0px 0px 200px;
+  }
+}
+.grid-img-1 {
+  grid-column: 1/3;
+  border-radius: 400px 0px 0px 0px;
+}
+.grid-img-2 {
+  border-radius: 0px 0px 0px 300px;
+}
+.grid-img-5 {
+  grid-column: 2/-1;
+  justify-self: end;
+}
+.grid-img-6 {
+}
+.grid-img-7 {
+}
+.grid-img-8 {
+}
+.grid-text {
+}
+.grid-img-9 {
+  grid-column: 2/-1;
+}
+
+.footer {
+  background-color: $color_dark;
+  padding: 100px 0 80px;
+  color: $color_main;
+  &__inner {
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+  }
+  &__title {
+    margin-bottom: 27px;
+  }
+  &__logo {
+  }
+  &__input {
+  }
+  &__btn {
+    padding: 10px 66px;
+    background-color: $color_main;
+  }
+  &__gallery {
+  }
+  &__link {
+  }
+  &__gallery-box {
+  }
+  &__img {
+  }
+  &__link-list {
+  }
+}
 // ---- ---- media ---- ---- //
 @media (max-width: 360px) {
 }
