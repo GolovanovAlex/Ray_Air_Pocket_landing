@@ -454,7 +454,7 @@ img {
 
 .footer {
   background-color: $color_dark;
-  padding: 100px 0 80px;
+  padding: 80px 0 40px;
   color: $color_main;
   &__inner {
   }
@@ -512,6 +512,10 @@ img {
   }
   &__img {
     margin-bottom: 50px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__link-list {
     display: flex;
