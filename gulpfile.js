@@ -59,7 +59,6 @@ function build() {
       'app/favicon/**/*',
       'app/fonts/**/*',
       'app/js/main.min.js',
-      'app/js/jquery.min.js',
       'app/*html',
     ],
     { base: 'app' }
