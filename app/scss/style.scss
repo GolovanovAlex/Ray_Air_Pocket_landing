@@ -1,6 +1,4 @@
 // ---- ---- reset ---- ---- //
-@import 'slick.scss';
-@import 'jquery.fancybox.scss';
 @import 'normalize.scss';
 @import 'myreset.scss';
 
@@ -152,8 +150,6 @@ img {
     color: $color_main;
     background-color: $color_dark;
   }
-  &__phone {
-  }
   &__content {
     position: relative;
     min-height: calc(100vh - 250px);
@@ -204,9 +200,6 @@ img {
     z-index: 4;
   }
 }
-
-.main {
-}
 .info {
   background-image: url(../images/bg/bg-content.jpg);
   background-size: cover;
@@ -247,8 +240,7 @@ img {
     width: 100%;
     margin-top: 95px;
   }
-  &__btn {
-  }
+
   &__img {
     z-index: 4;
   }
@@ -277,10 +269,7 @@ img {
   &__specs-caption {
     width: 180px;
   }
-  &__specs-text {
-  }
 }
-
 .buy {
   margin: 150px 0 0;
   &__inner {
@@ -351,7 +340,7 @@ img {
 .micro {
   margin-bottom: 150px;
   &__top {
-    background-image: url(../images/bg/bg-micro.png);
+    background-image: url(../images/bg/bg-micro.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -359,8 +348,6 @@ img {
   &__top-inner {
     min-height: 110vh;
     position: relative;
-  }
-  &__btn-box {
   }
   &__btn {
     position: absolute;
@@ -388,10 +375,7 @@ img {
     margin-bottom: 15px;
   }
 }
-
 .gallery {
-  &__inner {
-  }
   &__box {
     display: flex;
     gap: 68px;
@@ -420,15 +404,11 @@ img {
       z-index: 3;
     }
   }
-  &__min-img {
-  }
   &__max {
     display: grid;
     grid-template-columns: 300px 469px 391px;
     grid-template-rows: 340px 270px 270px;
     gap: 20px;
-  }
-  &__max-img {
   }
   &__max-text {
     display: flex;
@@ -456,24 +436,13 @@ img {
   grid-column: 2/-1;
   justify-self: end;
 }
-.grid-img-6 {
-}
-.grid-img-7 {
-}
-.grid-img-8 {
-}
-.grid-text {
-}
 .grid-img-9 {
   grid-column: 2/-1;
 }
-
 .footer {
   background-color: $color_dark;
   padding: 80px 0 40px;
   color: $color_main;
-  &__inner {
-  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -509,8 +478,6 @@ img {
     font-size: 20px;
     padding: 10px 66px;
     background-color: $color_main;
-  }
-  &__gallery {
   }
   &__link {
     display: block;
@@ -735,9 +702,6 @@ img {
     }
   }
 }
-.grid-img-3 {
-  justify-self: stretch;
-}
 @media (max-width: 650px) {
   .header {
     &__content {
@@ -745,8 +709,6 @@ img {
     }
     &__content-box {
       margin-right: 0;
-    }
-    &__decor-text--one {
     }
     &__decor-text-three {
       right: 50px;
@@ -765,7 +727,6 @@ img {
   }
   .info {
     background-position: 40%;
-
     &__top {
       flex-direction: column;
       justify-content: center;
@@ -884,14 +845,8 @@ img {
       margin-bottom: 10px;
     }
   }
-  .grid-img-4 {
-  }
   .grid-img-5 {
     grid-column: 1/3;
-  }
-  .grid-img-6 {
-  }
-  .grid-img-7 {
   }
   .grid-img-8 {
     grid-column: 2/3;
