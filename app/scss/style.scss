@@ -331,7 +331,7 @@ img {
     transition: all 0.5s ease;
 
     &:hover {
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
   }
   &__btn {
@@ -523,9 +523,10 @@ img {
   }
   &__gallery-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    gap: 15px;
   }
   &__img {
     margin-bottom: 50px;
@@ -541,16 +542,85 @@ img {
   }
 }
 // ---- ---- media ---- ---- //
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .header__decor-text--two {
     left: 0;
   }
+  .buy {
+    &__inner {
+      flex-direction: column;
+    }
+    &__img {
+      max-width: 500px;
+    }
+    &__box {
+      order: 2;
+    }
+  }
+  .gallery {
+    &__max {
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto;
+    }
+    &__max-img {
+      width: 100%;
+      align-self: stretch;
+    }
+  }
 }
-@media (max-width: 1010px) {
+@media (max-width: 1130px) {
+  .footer {
+    &__gallery-box {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  .gallery__box {
+    gap: 45px;
+  }
+}
+@media (max-width: 1020px) {
   .info {
     &__top {
       gap: 15px;
       justify-content: space-between;
+    }
+  }
+  .micro {
+    &__btn {
+      right: 20%;
+    }
+    &__top-box {
+      z-index: 4;
+    }
+  }
+  .gallery {
+    &__box {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &__text {
+      width: 500px;
+      margin: 0 auto;
+      order: 2;
+      padding: 20px 0;
+      border-top: 2px solid $color_dark;
+      border-bottom: 2px solid $color_dark;
+    }
+    &__min {
+      margin-bottom: 0;
+    }
+    &__max {
+      gap: 20px;
+      margin-top: 40px;
+    }
+  }
+}
+@media (max-width: 960px) {
+  .footer {
+    &__link-list {
+      font-size: 16px;
     }
   }
 }
@@ -563,8 +633,61 @@ img {
       padding-bottom: 15px;
     }
   }
+  .buy {
+    margin-top: 100px;
+  }
+  .footer {
+    &__top {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    &__logo {
+      align-self: center;
+      margin-bottom: 20px;
+    }
+    &__form {
+      order: 1;
+    }
+    &__link {
+      text-align: center;
+      gap: 10px;
+    }
+    &__link-list {
+      gap: 10px;
+    }
+    &__gallery-box {
+      width: 90%;
+    }
+  }
 }
-
+@media (max-width: 830px) {
+  .micro {
+    margin-bottom: 70px;
+  }
+  .gallery {
+    &__min {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+    }
+    &__min-img {
+      width: 100%;
+      align-self: stretch;
+    }
+    &__min::before {
+      display: none;
+    }
+    &__max-img {
+      width: 100%;
+      align-self: stretch;
+    }
+    &__max-text {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+}
 @media (max-width: 800px) {
   .header {
     &__btn {
@@ -603,6 +726,17 @@ img {
       gap: 35px;
     }
   }
+  .buy {
+    margin-top: 50px;
+  }
+  .gallery {
+    &__min {
+      padding: 30px 0px;
+    }
+  }
+}
+.grid-img-3 {
+  justify-self: stretch;
 }
 @media (max-width: 650px) {
   .header {
@@ -655,6 +789,29 @@ img {
       margin: 0 auto;
     }
   }
+  .gallery {
+    &__box {
+      gap: 10px;
+    }
+    &__min {
+      gap: 15px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .footer {
+    &__gallery-box {
+      width: 100%;
+    }
+  }
+  .micro {
+    &__top {
+      background-position: 50%;
+    }
+    &__btn {
+      right: 5%;
+    }
+  }
 }
 @media (max-width: 600px) {
   .info {
@@ -673,6 +830,76 @@ img {
       font-weight: 400;
     }
   }
+  .buy {
+    &__title {
+      margin: 0px auto 30px;
+      width: 100%;
+    }
+    &__text {
+      width: 100%;
+
+      &:nth-child(4) {
+        width: 300px;
+      }
+      &:nth-child(5) {
+        width: 300px;
+      }
+    }
+    &__price {
+      right: 5px;
+    }
+    &__btn {
+      display: block;
+      width: 90%;
+      max-width: 100%;
+      margin: 50px auto 0;
+    }
+  }
+  .micro {
+    margin-bottom: 50px;
+  }
+  .gallery {
+    &__text {
+      padding: 20px 15px;
+      width: 100%;
+    }
+    &__max {
+      gap: 10px;
+      margin-top: 40px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+    &__max-text {
+      display: none;
+    }
+  }
+  .footer {
+    &__link-list {
+      flex-direction: column;
+    }
+    &__img {
+      margin-bottom: 20px;
+    }
+    &__link {
+      margin-bottom: 10px;
+    }
+  }
+  .grid-img-4 {
+  }
+  .grid-img-5 {
+    grid-column: 1/3;
+  }
+  .grid-img-6 {
+  }
+  .grid-img-7 {
+  }
+  .grid-img-8 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .grid-img-9 {
+    grid-column: 1/3;
+  }
 }
 @media (max-width: 500px) {
   .header {
@@ -686,6 +913,43 @@ img {
     &__decor-text-three {
       right: 0;
       font-size: 28px;
+    }
+  }
+  .buy {
+    &__text {
+      &:nth-child(4) {
+        width: 100%;
+      }
+      &:nth-child(5) {
+        width: 100%;
+      }
+    }
+    &__price {
+      position: relative;
+      margin: 0 auto;
+    }
+    &__btn {
+      margin-top: 15px;
+    }
+  }
+  .footer {
+    &__logo {
+      svg {
+        width: 280px;
+      }
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__input {
+      margin-bottom: 35px;
+    }
+  }
+  .micro {
+    &__title {
+      font-size: 48px;
+      line-height: 55px;
+      margin-bottom: 40px;
     }
   }
 }
@@ -718,7 +982,6 @@ img {
     &__text {
       font-size: 16px;
     }
-
     &__specs-list {
       font-size: 16px;
     }
@@ -729,5 +992,36 @@ img {
     &__specs-caption {
       font-size: 14px;
     }
+  }
+  .buy {
+    &__text {
+      font-size: 16px;
+    }
+  }
+  .footer {
+    &__title {
+      font-size: 36px;
+    }
+  }
+  .micro {
+    &__top {
+      background-position: 50%;
+    }
+    &__btn {
+      right: 5%;
+    }
+    &__title {
+      font-size: 36px;
+      line-height: 40px;
+    }
+    &__list {
+      font-size: 18px;
+    }
+    &__list-item {
+      margin-bottom: 10px;
+    }
+  }
+  .gallery__text {
+    font-size: 16px;
   }
 }
